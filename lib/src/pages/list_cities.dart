@@ -13,8 +13,7 @@ class ListCities extends StatelessWidget {
   );
 
   void cityBoxAction(BuildContext context, cityData) {
-    print(cityData['name']);
-    //Navigator.pushNamed(context, '/city_screen', arguments: cityData);
+    Navigator.pushNamed(context, '/city', arguments: cityData);
   }
 
   @override
@@ -47,7 +46,8 @@ class ListCities extends StatelessWidget {
           children: List.generate(cities.length, (index) {
             return CityBox(
               data: cities[index],
-              onTap: (cityData){
+              //cityData é o data lá no Widget CityBox
+              onTap: (cityData){ 
                 cityBoxAction(context, cityData);
               },
             );

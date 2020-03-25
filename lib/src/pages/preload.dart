@@ -42,7 +42,7 @@ class _PreloadPageState extends State<PreloadPage> {
     SystemChrome.setSystemUIOverlayStyle(
       (Theme.of(context).platform == TargetPlatform.iOS)
        ? SystemUiOverlayStyle.dark
-       : SystemUiOverlayStyle.light
+       : SystemUiOverlayStyle.dark
     );
     
     return Scaffold(
